@@ -5,7 +5,7 @@ import json
 import colorama
 from colorama import Fore
 
-################################################# APIs #####################################################################################
+######################################################### APIs ##############################################################################
 
 CS_api_key = ""             ## Insert CrowdStrike Client ID Here.
 CS_api_secret = ""          ## Insert CrowdStrike Secret Key Here.
