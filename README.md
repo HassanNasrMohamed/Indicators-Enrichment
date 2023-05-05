@@ -18,6 +18,7 @@
   enrich_size = XX        # Insert Number Of Indicators to Enrich in Each query.
 
   The Maximum Size is 1000 IOC to enrich per Query.
+  
   the defult in script is set to 100 IOC per Query.
 
 # APIs
