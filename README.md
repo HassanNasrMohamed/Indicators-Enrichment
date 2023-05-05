@@ -19,7 +19,7 @@
 
   The Maximum Size is 1000 IOC to enrich per Query.
   
-  the defult in script is set to 100 IOC per Query.
+  The defult in script is set to 100 IOC per Query.
 
 # APIs
  Insert Your API Keys to Mandiant & CrowdStrike In Script:
