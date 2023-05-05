@@ -13,6 +13,13 @@
  
  5- Find the enriched IOCs in "Enriched_IOCs.csv" file.
 
+# You Can Set a Limit for Each Query from the below Variable:
+
+  enrich_size = XX        # Insert Number Of Indicators to Enrich in Each query.
+
+  The Maximum Size is 1000 IOC to enrich per Query.
+  the defult in script is set to 100 IOC per Query.
+
 # APIs
  Insert Your API Keys to Mandiant & CrowdStrike In Script:
  
