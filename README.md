@@ -58,7 +58,7 @@ python Indicators_Enrichment.py
 
 # Contributing
 
-If you find any issues with the Indicator Enrichment Script, please report them on the GitHub Issues page. Contributions are also welcome in the form of pull requests.
+If you find any issues with the Indicator Enrichment Script, please report them on the GitHub Issues page. Contributions are also welcome in the form of pull requests..
 
 
 
