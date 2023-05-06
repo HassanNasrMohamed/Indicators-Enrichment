@@ -39,7 +39,7 @@ The script also requires an API key for each of the threat intelligence feeds th
 ~~~
 enrich_size = X        # Insert Number Of Indicators to Enrich in Each query.
 ~~~
-Replace 'X' with a value between (1 - 1000) as a number for inreched indicators per query. (The default value is set to 100). 
+Replace 'X' with a value between (1 - 1000) as a number for enriched indicators per query. (The default value is set to 100). 
 
 #### To run the script, use the following command:
 
