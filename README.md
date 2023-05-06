@@ -1,33 +1,64 @@
-# Indicators-Enrichment
+# Indicator Enrichment Script
 
- Enrich List Of Indicators (IOCs) Using Commercial Threat Intelligence (Mandiant, CrowdStrike).
+This is a Python script that performs enrichment of indicators of compromise (IOCs) by querying various commercial threat intelligence feeds like (Mandiant & CrowdStrike). The script takes a list of IOCs in a CSV file as input, and outputs an enriched CSV file that includes additional information about the IOCs.
 
-# How To Use !!!
- 1- Run CMD with ---> "pip install -r requirements.txt".
- 
- 2- Insert Your API Keys for Mandiant & CrowdStrike in the begining of Script.
- 
- 3- Insert your Indicators (IPs, Domains and URLs) that you want to enrich it in "IOCs_List.csv".
- 
- 4- Run the Script "Python Indicators_Enrichment.py".
- 
- 5- Find the enriched IOCs in "Enriched_IOCs.csv" file.
+# Installation
 
-# You Can Set a Limit for Each Query from the below Variable:
+To use the Indicator Enrichment Script, you need to have Python 3.6 or later installed on your system. You can install the required dependencies by running the following command:
 
-  enrich_size = XX        # Insert Number Of Indicators to Enrich in Each query.
+ ~~~ 
+   pip install -r requirements.txt 
+ ~~~
 
-  The Maximum Size is 1000 IOC to enrich per Query.
+This will install all the required packages including pandas, requests, and Json.
+
+# Usage
+
+To run the Indicator Enrichment Script, you need to provide the script with a CSV file containing a list of IOCs. The file must have the following column:
+
+    indicator: The IOC itself (e.g., IP address, domain name, URL, etc.).
   
-  The defult in script is set to 100 IOC per Query.
 
-# APIs
- Insert Your API Keys to Mandiant & CrowdStrike In Script:
- 
- CS_api_key = ""            		   ## Insert CrowdStrike Client ID Here. 
- 
- CS_api_secret = ""          		   ## Insert CrowdStrike Secret Key Here.
- 
- Mandiant_api_key = ""       		  ## Insert Mandiant Public Key ID Here.
- 
- Mandiant_api_secret = ""    		  ## Insert Mandiant Secret Key Here.
+The script also requires an API key for each of the threat intelligence feeds that it queries. You can obtain API keys for the various feeds by following the instructions provided on their respective websites.
+
+# API Keys
+
+#### Insert your API Keys in the first begining of the script as follows:
+
+~~~
+   CS_api_key = ""             ## Insert CrowdStrike Client ID Here.
+   CS_api_secret = ""          ## Insert CrowdStrike Secret Key Here.
+   Mandiant_api_key = ""       ## Insert Mandiant Public Key ID Here.
+   Mandiant_api_secret = ""    ## Insert Mandiant Secret Key Here.
+~~~
+
+# Query Limit
+
+#### You can set the number of enriched indicators per query from the below variable in the script:
+
+~~~
+enrich_size = X        # Insert Number Of Indicators to Enrich in Each query.
+~~~
+Replace 'X' with a value between (1 - 1000) as a number for inreched indicators per query. (The default value is set to 100). 
+
+#### To run the script, use the following command:
+
+~~~
+python Indicators_Enrichment.py
+~~~
+
+#### The script will output a CSV file with the following columns:
+
+    * Source: The name of the threat intelligence feed that provided the information.
+    * Indicator: The IOC itself.
+    * Indicator_type: The type of the IOC (e.g., IP address, domain name, URL, etc.).
+    * Malicious_Confidence: The Malicious Score of this Indicator.
+    * Actors: Related Actor of this Indicator (From CrowdStrike Only!).
+    * Kill_Chains: The Kill Chain of this Actor (From CrowdStrike Only!).
+
+# Contributing
+
+If you find any issues with the Indicator Enrichment Script, please report them on the GitHub Issues page. Contributions are also welcome in the form of pull requests.
+
+
+
