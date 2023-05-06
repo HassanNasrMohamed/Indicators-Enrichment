@@ -14,7 +14,7 @@ This will install all the required packages including pandas, requests, and Json
 
 # Usage
 
-To run the Indicator Enrichment Script, you need to provide the script with a CSV file containing a list of IOCs. The file must have the following column:
+To run the Indicator Enrichment Script, you need to provide the script with a CSV file with name (IOCs_List.csv) containing a list of IOCs. The file must have the following column:
 
     indicator: The IOC itself (e.g., IP address, domain name, URL, etc.).
   
@@ -47,7 +47,7 @@ Replace 'X' with a value between (1 - 1000) as a number for inreched indicators 
 python Indicators_Enrichment.py
 ~~~
 
-#### The script will output a CSV file with the following columns:
+#### The script will output a CSV file (Enriched_IOCs.csv) with the following columns:
 
     * Source: The name of the threat intelligence feed that provided the information.
     * Indicator: The IOC itself.
